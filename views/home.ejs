@@ -1,0 +1,28 @@
+<%- include('./partials/header') %> 
+
+<div class="container py-5">
+    <h1>Contáctanos</h1>
+    <p>Deja tu información y en breve estaremos contigo.</p>
+    <!-- Formulario -->
+    <form action="/contacto" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escribe tu nombre" name="nombre">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+        </div>
+        <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Deja tu mensaje</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar</button>
+    </form>
+    <!-- Formulario -->
+
+</div>
+
+
+<%- include('./partials/header') %> 
