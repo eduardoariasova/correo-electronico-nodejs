@@ -16,7 +16,7 @@ router.route("/contacto")
     var email   = req.body.email;
     var mensaje = req.body.mensaje;
 
-    var correoAdmin = "proyectos@pretwor.com";
+    var correoAdmin = "";
     // Función de correo electrónico
     // Not # 0: correoNotificacion(cualNotificacion, nombre, email, mensaje)
     correoNotificacion(0, nombre, correoAdmin, mensaje); //
