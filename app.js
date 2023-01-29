@@ -1,3 +1,4 @@
+require('dotenv').config(); // solcitamos dotenv
 const express = require('express');
 const bodyParser = require('body-parser');
 // Declaraciones iniciales ////////////////////////////

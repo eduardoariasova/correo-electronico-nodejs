@@ -1,3 +1,4 @@
+require('dotenv').config(); // solcitamos dotenv
 const nodemailer = require('nodemailer');
 
 // Configurar el correo electrónico
@@ -5,8 +6,8 @@ const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
     auth: {
-      user: '',
-      pass: '',
+      user: process.env.SECRETOCORREO,
+      pass: process.env.SECRETOCONTRA,
     },
 });
 // Configurar el correo electrónico
