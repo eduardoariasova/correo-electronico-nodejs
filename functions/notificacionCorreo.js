@@ -17,6 +17,7 @@ module.exports = function(cualNotificacion, nombre, email, mensaje){
     // Notificaciones
     // 0. Notificación de formulario de contacto - administrador.
     // 1. Notificación de formulario de contacto - cliente.
+    // 2. Notificación con node-cron
 
     // Notificaciones
     let notificaciones = [
@@ -29,6 +30,11 @@ module.exports = function(cualNotificacion, nombre, email, mensaje){
             subject: "Hemos recibido tu mensaje",
             titulo : "Pronto estaremos contigo",
             notificacion: "Hola" + nombre + ". Hemos recibido tu mensaje y en breve nuestro equipo de soporte se pondrá en contacto contigo."
+        },
+        {
+            subject: "Correo programado",
+            titulo : "Correo programado",
+            notificacion: "Hola, este correo ha sido enviado porque se programó con node-cron."
         }
     ]
 

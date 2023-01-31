@@ -1,8 +1,26 @@
+require('dotenv').config(); // solcitamos dotenv
 const router = require('express').Router();
 const correoNotificacion = require('./functions/notificacionCorreo.js');
-// Funciones //
+const cron = require('node-cron');
+//Solicitudes //
 
-// Funciones //
+
+//Segundo plano 
+cron.schedule('31 18 * * * ', () => {
+
+    
+    //FUNCIÓN CORREO
+    correoNotificacion(2, "NA", process.env.EMAILENVIAR, "NA" );
+    console.log('Correo enviado correctamente');
+}, 
+{
+    scheduled: true,
+    timezone: "America/Bogota"
+});
+
+
+
+
 
 
 router.route("/")
